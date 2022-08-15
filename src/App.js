@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import BudgetCard from './components/BudgetCard'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className='flex justify-between'>
+        <h1 className='text-3xl ml-4 mt-6 font-bold'>Budgets</h1>
+        <div className='mr-4 mt-5 flex space-x-2'>
+          <button className='bg-blue-500 border-solid border-2 rounded-md text-white p-2'>Add Budget</button>
+          <button className='border-solid border-2 rounded-md p-2'>Add Expense</button>
+        </div>
+
       </header>
+      <div>
+        <BudgetCard name='Entertainment' amount='500' max='1000'></BudgetCard>
+      </div>
     </div>
+    
   );
 }
 
