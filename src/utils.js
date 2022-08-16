@@ -11,3 +11,15 @@ export const getProgressBarVarient = (amount, max) => {
     return "red";
 
 }
+
+export const getRatio = (amount, max) => {
+    const ratio = (amount / max) * 100;
+    if (ratio > 100) return '100%';
+    return `${ratio}%`
+}
+
+export const overload = (amount, max) => {
+     const ratio = getRatio(amount,max);
+     if (ratio === '100%') return '#ffb3b3'
+     else return '#ffffff'
+}
